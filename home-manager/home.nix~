@@ -1,7 +1,0 @@
-{ config, pkgs, lib, inputs, osConfig, ... }:
-{
-  config = {
-    programs.home-manager.enable = true;
-    home.stateVersion = osConfig.system.stateVersion;
-  };
-}
