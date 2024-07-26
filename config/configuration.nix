@@ -48,7 +48,8 @@
   # Locale and internationalization
   # TODO: successfully change locale to something ASCII-only
   # TODO: get terminus font to actually work!
-  i18n.defaultLocale = "en_US.UTF8";
+  i18n.defaultLocale = "en-US.ISO-8859-1";
+  i18n.supportedLocales = [ "all" ];
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";
