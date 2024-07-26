@@ -5,6 +5,9 @@
     # Nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
+    # Hardware support
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     # Home manager
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
@@ -12,7 +15,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
     let inherit (self) outputs; in
     {
     nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
@@ -26,6 +29,7 @@
 	  home-manager.useUserPackages = true;
 	  home-manager.users.theta = import ./home-manager/home.nix;
         }
+        nixos-hardware.nixosModules.lenovo-thinkpad-t14s
       ];
     };
   };

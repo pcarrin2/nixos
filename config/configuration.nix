@@ -24,10 +24,13 @@
     };
     initrd = {
       availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
-      kernelModules = [ "dm-snapshot" ];
+      # i915 module here (or maybe under boot) gets terminus font to stick during boot
+      kernelModules = [ "dm-snapshot" "i915" ];
       luks.devices.cryptroot.device = "/dev/disk/by-uuid/dc6aedcc-b301-4a34-833a-9f0100d3ceb3";
     };
-    kernelModules = [ "kvm-intel" ];
+    # i915 module here (or maybe under initrd) gets terminus font to stick during boot
+    kernelModules = [ "kvm-intel" "acpi_call" "i915" ];
+    # kernelParams = [ "acpi_backlight=native" "i915.enable_guc=2" ];
     extraModulePackages = [ ];
   };
 
@@ -46,12 +49,10 @@
   };
 
   # Locale and internationalization
-  # TODO: successfully change locale to something ASCII-only
-  # TODO: get terminus font to actually work!
-  i18n.defaultLocale = "en-US.ISO-8859-1";
+  i18n.defaultLocale = "en_US.iso88591";
   i18n.supportedLocales = [ "all" ];
   console = {
-    font = "Lat2-Terminus16";
+    font = "ter-v16n";
     keyMap = "us";
     packages = with pkgs; [ terminus_font ];
   };
@@ -75,6 +76,7 @@
     curl
     # Hardware info
     lshw
+    pciutils
     # SSH
     openssh
     # File utilities
