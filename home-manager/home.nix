@@ -19,7 +19,7 @@
       pamixer
       # Media and music
       mplayer
-      cava
+      cli-visualizer
       # Pictures 
       fim
       inkscape

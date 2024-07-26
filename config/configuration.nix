@@ -49,7 +49,7 @@
   };
 
   # Locale and internationalization
-  i18n.defaultLocale = "en_US.iso88591";
+  i18n.defaultLocale = "en_US.utf8";
   i18n.supportedLocales = [ "all" ];
   console = {
     font = "ter-v16n";
@@ -77,6 +77,7 @@
     # Hardware info
     lshw
     pciutils
+    usbutils
     # SSH
     openssh
     # File utilities
