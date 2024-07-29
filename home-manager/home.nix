@@ -19,7 +19,6 @@
       pamixer
       # Media and music
       mplayer
-      cli-visualizer
       # Pictures 
       fim
       inkscape

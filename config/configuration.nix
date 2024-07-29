@@ -69,8 +69,6 @@
   environment.systemPackages = with pkgs; [
     # Editors
     vim
-    neovim
-    emacs
     # Web
     wget
     curl
@@ -78,6 +76,7 @@
     lshw
     pciutils
     usbutils
+    input-utils
     # SSH
     openssh
     # File utilities
@@ -86,6 +85,7 @@
     zip
     unzip
     binutils
+    ripgrep
     # Disk, partition, and filesystem utilities
     smartmontools
     parted
@@ -93,6 +93,8 @@
     # General utilities
     util-linux
     linux-firmware
+    iotop
+    dateutils
     # Sound utilities
     alsa-utils
     # Development

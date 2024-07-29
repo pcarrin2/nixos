@@ -22,7 +22,6 @@
 	  # workaround for https://github.com/NixOS/nixpkgs/issues/323262
 	  extraArgs="--remote-path=borg1"
 	'';
-	inhibitsSleep = true;
       };
 
     };
