@@ -12,6 +12,7 @@
       ./users.nix
       ./zerotier.nix
       ./libvirt.nix
+      ./tor.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
