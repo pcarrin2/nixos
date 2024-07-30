@@ -1,6 +1,9 @@
-# Goal here is to create a network namespace entirely for Tor connections.
-# This should be way more secure than using a tor wrapper around individual applications.
-# It provides enhanced isolation compared to a tun2socks networking interface within the main network namespace.
+# This module creates a network namespace containing only a TUN interface for Tor connections.
+# Applications in the 'torns' namespace can ONLY see the Tor TUN interface, preventing leakage.
+
+# to use the namespace: first start tor-namespace.service, then run 'sudo ip netns exec torns [command]'.
+# THIS MODULE HAS NOT BEEN SECURITY-TESTED OR EVEN LOOKED AT CAREFULLY. 
+# No lifeguard on duty, swim at your own risk!
 
 { config, lib, pkgs, ... }:
 {
@@ -31,10 +34,11 @@
   };
  
   # systemd service to move the above tun interface into its own namespace 
+  # TODO I think this could be made more general, less reliant on the tunnel being named tun0 for example,
+  # by using systemd service templating. But I don't really want to figure out templating tonight...
   systemd.services."tor-namespace" = {
     enable = true;
     description = "Tor Network Namespace";
-    requires = [ "tor-interface.service" ];
     after = [ "tor-interface.service" ];
     bindsTo = [ "tor-interface.service" ];
     serviceConfig = {
@@ -46,6 +50,9 @@
         ${iproute}/bin/ip netns exec torns ${iproute}/bin/ip link set tun0 up
         ${iproute}/bin/ip netns exec torns ${iproute}/bin/ip addr add 10.1.1.1/24 dev tun0
         ${iproute}/bin/ip netns exec torns ${iproute}/bin/ip route add default via 10.1.1.1
+      '';
+      ExecStop = with pkgs; writers.writeBash "tor-namespace-stop" ''
+        ${iproute}/bin/ip netns del torns
       '';
     };
   };
