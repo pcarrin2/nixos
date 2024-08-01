@@ -73,6 +73,8 @@
     # Web
     wget
     curl
+    dig
+    tcpdump
     # Hardware info
     lshw
     pciutils
@@ -87,6 +89,7 @@
     unzip
     binutils
     ripgrep
+    file
     # Disk, partition, and filesystem utilities
     smartmontools
     parted

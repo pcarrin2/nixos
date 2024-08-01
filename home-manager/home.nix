@@ -3,6 +3,8 @@
   imports = [ 
     ./tmux.nix 
     ./bash.nix
+    ./emacs-unstraightened.nix
+    ./virtualization.nix
   ];
   
   home = {
