@@ -9,7 +9,7 @@
   
   programs.doom-emacs = {
     enable = true;
-    doomDir = ../config/.doom.d;
+    doomDir = ../config/doom.d;
     extraPackages = epkgs: [
       epkgs.treesit-grammars.with-all-grammars
       epkgs.rust-mode
