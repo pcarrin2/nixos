@@ -102,6 +102,7 @@
     # Sound utilities
     alsa-utils
     # Development
+    gcc
     docker
     # Other
     vlock
