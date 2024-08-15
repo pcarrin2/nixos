@@ -22,6 +22,7 @@
       # Media and music
       mplayer
       mpv
+      yt-dlp
       # Pictures 
       fim
       inkscape
