@@ -21,6 +21,7 @@
       pamixer
       # Media and music
       mplayer
+      mpv
       # Pictures 
       fim
       inkscape
