@@ -23,6 +23,7 @@
       mplayer
       mpv
       yt-dlp
+      id3v2
       # Pictures 
       fim
       inkscape
