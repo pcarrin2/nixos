@@ -3,7 +3,6 @@
   imports = [ 
     ./tmux.nix 
     ./bash.nix
-    ./emacs-unstraightened.nix
     ./virtualization.nix
   ];
   
@@ -24,6 +23,7 @@
       mpv
       yt-dlp
       id3v2
+      ytfzf
       # Pictures 
       fim
       inkscape
