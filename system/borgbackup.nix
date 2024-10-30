@@ -8,7 +8,7 @@
 	repo = "de3570@de3570.rsync.net:home";
 	encryption = {
           mode = "repokey-blake2";
-	  passCommand = "cat /home/theta/.config/borg_passphrase";
+	  passCommand = "cat /home/theta/.secrets/borg_passphrase";
         };
 	user = "theta";
 	compression = "auto,lzma";
