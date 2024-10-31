@@ -117,6 +117,9 @@
     enableSSHSupport = true;
   };
 
+  # Needed by sway
+  security.polkit.enable = true;
+
   system.stateVersion = "24.05"; # Never change this!
 
 }

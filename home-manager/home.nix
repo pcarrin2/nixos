@@ -4,6 +4,8 @@
     ./tmux.nix 
     ./bash.nix
     ./virtualization.nix
+    ./sway.nix
+    ./foot.nix
   ];
   
   home = {
