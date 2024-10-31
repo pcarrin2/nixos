@@ -7,13 +7,15 @@
 }: {
   programs.foot = {
     enable = true;
-    main = {
+    settings = {
+      main = {
       font = "Unifont:size=12";
       term = "xterm-256color";
-    };
-    mouse = {
+      };
+      mouse = {
       hide-when-typing = "yes";
-    };
+      };
     # todo custom colors
+    };
   };
 }

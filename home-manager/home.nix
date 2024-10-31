@@ -6,6 +6,7 @@
     ./virtualization.nix
     ./sway.nix
     ./foot.nix
+    ./vim.nix
   ];
   
   home = {
@@ -13,11 +14,13 @@
     homeDirectory = "/home/theta";
 
     packages = with pkgs; [
-      # Web
+      # GUI
+      firefox
+      signal-desktop
+      thunderbird
+      # TUI web/email
       w3m
       alpine
-      # Shells
-      nushell
       # Sound utilities
       pamixer
       # Media and music

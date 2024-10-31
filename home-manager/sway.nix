@@ -6,49 +6,74 @@
   ...
 }: {
   wayland.windowManager.sway = {
-  enable = true;
-  config = rec {
-  systemd.enable = true;
-  };
+    enable = true;
+    systemd.enable = true;
+    config = {
+      modifier = "Mod4";
+      defaultWorkspace = "workspace number 1";
+      bars = [
+        {
+          command = "waybar";
+          id = "topBar";
+        }
+      ];
+      window.titlebar = false;
+      window.border = 1;
+    };
+    
   };
   
   programs.waybar = {
   enable = true;
+  systemd.enable = true;
   settings = {
-  topBar = {
-  layer = "top";
-  position = "top";
-  height = 30;
+    topBar = rec {
+      layer = "top";
+      position = "top";
+      height = 24;
   
-  modules-left = [ "sway/workspaces", "sway/mode" ];
-  modules-center = [ "sway/window" ];
-  modules-right = [ "battery", "clock" ];
-  };
+      modules-left = [ "sway/workspaces" ];
+      modules-center = [ "sway/window" ];
+      modules-right = [ "battery" "custom/spacer" "clock" ];
+
+      battery = {
+        format = "{capacity}%";
+      };
+
+      "custom/spacer" = {
+        format = " | ";
+        interval = "once";
+      };
+      
+      clock = {
+        interval = 1;
+        format = "{:%F %H:%M:%S} ";
+      };
+    };
   
-  "sway/workspaces" = {
-  disable-scroll = true;
-  max-length = 50;
-  };
-  
-  "battery" = {
-  format = "{capacity}%";
-  };
-  
-  "clock" = {
-  interval = 1;
-  format = "{:%F :%T}";
-  };
   };
   
   style = ''
-  * {
-  border: none;
-  border-radius: 0;
-  font-family: Unifont;
-  font-size: 12.0;
-  background: #111111;
-  color: #EEEEEE;
-  }
+    * {
+      border: none;
+      border-radius: 0;
+      font-family: Unifont;
+      font-size: 12.0pt;
+      background: inherit;
+      color: #EEEEEE;
+      margin: 0px 2px;
+      padding: 0px;
+    }
+
+    window#waybar {
+      background-color: #333333;
+    }
+
+    #workspaces button:hover {
+      border: none;
+      box-shadow: none;
+      background-color: #555555;
+    }
   '';
   };
 }
