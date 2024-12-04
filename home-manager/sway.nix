@@ -11,12 +11,8 @@
     config = {
       modifier = "Mod4";
       defaultWorkspace = "workspace number 1";
-      bars = [
-        {
-          command = "waybar";
-          id = "topBar";
-        }
-      ];
+      # waybar will generate a status bar; sway's `bars` list needs to be empty or else there are two bars
+      bars = [];
       window.titlebar = false;
       window.border = 1;
       menu = "\"rofi -i -modi drun,run,window -show drun\"";
