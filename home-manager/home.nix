@@ -7,6 +7,7 @@
     ./sway.nix
     ./foot.nix
     ./vim.nix
+    ./rofi.nix
   ];
   
   home = {
@@ -29,6 +30,7 @@
       yt-dlp
       id3v2
       ytfzf
+      cava
       # Pictures 
       fim
       inkscape
@@ -41,13 +43,15 @@
       cargo
       rustc
       rust-analyzer
-      # Other
+      # Python 3
+      python3
+      # Github
       gh
-      fbterm
+      # Silly
       neofetch
       pipes
       cmatrix
-      bk
+      cowsay
     ];
   };
 

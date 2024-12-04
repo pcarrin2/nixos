@@ -39,7 +39,7 @@
   hardware.cpu.intel.updateMicrocode = true;
   hardware.enableRedistributableFirmware = true;
   hardware.enableAllFirmware = true;
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   networking = {
     hostName = "thinkpad";
@@ -78,7 +78,6 @@
     lshw
     pciutils
     usbutils
-    input-utils
     # SSH
     openssh
     # File utilities
@@ -105,7 +104,6 @@
     docker
     # Other
     vlock
-    tun2socks
   ];
 
   environment.variables = { EDITOR = "vim"; NIXOS_OZONE_WL = "1"; };

@@ -19,6 +19,7 @@
       ];
       window.titlebar = false;
       window.border = 1;
+      menu = "\"rofi -i -modi drun,run,window -show drun\"";
     };
     
   };
