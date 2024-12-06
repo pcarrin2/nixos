@@ -8,6 +8,7 @@
   wayland.windowManager.sway = {
     enable = true;
     systemd.enable = true;
+    extraConfig = "output * background #433a96 solid_color";
     config = {
       modifier = "Mod4";
       defaultWorkspace = "workspace number 1";
@@ -69,7 +70,11 @@
     #workspaces button:hover {
       border: none;
       box-shadow: none;
-      background-color: #555555;
+      background-color: #BA4686;
+    }
+
+    #workspaces button.focused {
+      background-color: #4686BA;
     }
   '';
   };

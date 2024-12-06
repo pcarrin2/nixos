@@ -45,6 +45,7 @@
       rust-analyzer
       # Python 3
       python3
+      virtualenv
       # Github
       gh
       # Silly

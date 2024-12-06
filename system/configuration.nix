@@ -97,6 +97,7 @@
     linux-firmware
     iotop
     dateutils
+    openssl
     # Sound utilities
     alsa-utils
     # Development
