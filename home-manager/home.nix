@@ -19,6 +19,10 @@
       firefox
       signal-desktop
       thunderbird
+      # Wayland utils
+      wl-clipboard
+      slurp
+      wayshot
       # TUI web/email
       w3m
       alpine

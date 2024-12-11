@@ -8,7 +8,10 @@
   wayland.windowManager.sway = {
     enable = true;
     systemd.enable = true;
-    extraConfig = "output * background #433a96 solid_color";
+    extraConfig = ''
+      output * background #433a96 solid_color
+      bindsym Print exec wayshot --stdout -s "$( slurp )" | wl-copy
+    '';
     config = {
       modifier = "Mod4";
       defaultWorkspace = "workspace number 1";
