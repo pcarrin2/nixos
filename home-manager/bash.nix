@@ -4,7 +4,7 @@
     enable = true;
     historyControl = [ "ignorespace" ];
     initExtra = ''
-      PS1="\a\n\[\033[1;35m\]\! \[\033[1;34m\][\u@\h:\w]\$ \[\033[0m\]"
+      PS1="\a\[\033[1;35m\]\! \[\033[1;34m\][\u@\h:\w]\$ \[\033[0m\]"
       if [ "$TERM" = "linux" ]; then
 				echo -en "\e]P0101010" #black
 				echo -en "\e]P82B2B2B" #darkgrey
