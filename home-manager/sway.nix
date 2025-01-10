@@ -81,4 +81,8 @@
     }
   '';
   };
+
+  services.mako = {
+    enable = true;
+  };
 }
