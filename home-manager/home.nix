@@ -19,6 +19,8 @@
       firefox
       signal-desktop
       thunderbird
+      # Notifications
+      libnotify
       # Wayland utils
       wl-clipboard
       slurp
@@ -59,6 +61,8 @@
       cowsay
     ];
   };
+
+  services.systembus-notify.enable = true; # for notifications!
 
   programs.home-manager.enable = true;
   programs.git.enable = true;

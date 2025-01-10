@@ -111,8 +111,6 @@
 
   environment.variables = { EDITOR = "vim"; NIXOS_OZONE_WL = "1"; };
 
-  services.systembus-notify.enable = true;
-
   services.printing.enable = true;
   programs.mtr.enable = true;
   programs.gnupg.agent = {
