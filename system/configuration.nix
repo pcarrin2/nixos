@@ -100,6 +100,7 @@
     iotop
     dateutils
     openssl
+    nix-index
     # Sound utilities
     alsa-utils
     # Development
