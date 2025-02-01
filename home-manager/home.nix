@@ -19,13 +19,16 @@
       firefox
       signal-desktop
       thunderbird
+      # VPN connection
+      networkmanager-openconnect
       # Notifications
       libnotify
       # Wayland utils
       wl-clipboard
       slurp
       wayshot
-      # TUI web/email
+      # TUI messaging
+      iamb
       w3m
       alpine
       # Sound utilities

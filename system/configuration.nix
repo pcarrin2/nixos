@@ -74,8 +74,6 @@
     curl
     dig
     tcpdump
-    openconnect
-    networkmanager-openconnect
     # Hardware info
     lshw
     pciutils
