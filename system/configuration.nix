@@ -52,7 +52,7 @@
   i18n.defaultLocale = "en_US.utf8";
   i18n.supportedLocales = [ "all" ];
   console = {
-    font = "/etc/nixos/system/tty_fonts/unifont.psf";
+    font = "/etc/nixos/system/assets/unifont.psf";
     keyMap = "us";
   };
 
