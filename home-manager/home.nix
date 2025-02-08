@@ -62,6 +62,7 @@
       pipes
       cmatrix
       cowsay
+      fortune
     ];
   };
 
