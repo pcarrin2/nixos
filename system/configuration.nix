@@ -52,9 +52,8 @@
   i18n.defaultLocale = "en_US.utf8";
   i18n.supportedLocales = [ "all" ];
   console = {
-    font = "ter-v16n";
+    font = "/etc/nixos/system/tty_fonts/unifont.psf";
     keyMap = "us";
-    packages = with pkgs; [ terminus_font ];
   };
 
   time.timeZone = "America/Chicago";
