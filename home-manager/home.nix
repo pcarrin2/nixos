@@ -57,6 +57,8 @@
       virtualenv
       # Github
       gh
+      # Art
+      processing
       # Silly
       neofetch
       pipes
