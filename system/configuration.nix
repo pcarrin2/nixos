@@ -60,6 +60,7 @@
 
   # Make Nix usable
   nix.settings.experimental-features = "nix-command flakes";
+  nix.settings.download-buffer-size = 536870912;
 
   # Disable channels
   nix.channel.enable = false;
