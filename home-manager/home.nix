@@ -59,6 +59,7 @@
       gh
       # Art
       processing
+      darktable
       # Silly
       neofetch
       pipes

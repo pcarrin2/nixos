@@ -11,6 +11,11 @@
     extraConfig = ''
       output * background #433a96 solid_color
       bindsym Print exec wayshot --stdout -s "$( slurp )" | wl-copy
+      bindsym XF86AudioMute exec pamixer -m
+      bindsym XF86AudioRaiseVolume exec pamixer -i 5
+      bindsym XF86AudioLowerVolume exec pamixer -d 5
+      bindsym Shift+XF86AudioRaiseVolume exec pamixer -i 1
+      bindsym Shift+XF86AudioLowerVolume exec pamixer -d 1
     '';
     config = {
       modifier = "Mod4";
