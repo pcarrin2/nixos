@@ -15,6 +15,9 @@
       bind '"' split-window -v -c "#{pane_current_path}"
       bind 'b' split-window -h -c "#{pane_current_path}"
 
+      # mouse compatibility
+      set -g mouse on
+
       # avoid gaps in numbering if a window is closed
       set -g renumber-windows on
       
