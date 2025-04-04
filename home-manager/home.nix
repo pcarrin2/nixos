@@ -68,7 +68,7 @@
       fortune
     ];
 
-    keyboard = null;
+    keyboard.options = [ "caps:swapescape" ];
   };
 
   services.systembus-notify.enable = true; # for notifications!
