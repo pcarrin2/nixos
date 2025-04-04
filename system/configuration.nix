@@ -12,6 +12,7 @@
       ./users.nix
       ./zerotier.nix
       ./libvirt.nix
+      ./kbd.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -45,7 +46,7 @@
     hostName = "thinkpad";
     networkmanager.enable = true;
     useDHCP = lib.mkDefault true;
-    firewall.enable = false;
+    firewall.enable = true;
   };
 
   # Locale and internationalization
@@ -104,6 +105,8 @@
     # Development
     gcc
     docker
+    # Virtualization
+    qemu
     # Other
     vlock
   ];
