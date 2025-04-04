@@ -67,6 +67,8 @@
       cowsay
       fortune
     ];
+
+    keyboard = null;
   };
 
   services.systembus-notify.enable = true; # for notifications!
