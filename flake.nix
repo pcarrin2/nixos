@@ -13,9 +13,17 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Neovim config files
+    neovim-config = {
+      type = "github";
+      owner = "pcarrin2";
+      repo = "neovim_config";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, neovim-config, ... }@inputs:
     let inherit (self) outputs; in
     {
     nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
@@ -23,11 +31,12 @@
       system = "x86-64_linux";
       modules = [
         ./system/configuration.nix
-	home-manager.nixosModules.home-manager
-	{
+	      home-manager.nixosModules.home-manager
+	      {
           home-manager.useGlobalPkgs = true;
-	  home-manager.useUserPackages = true;
-	  home-manager.users.theta = import ./home-manager/home.nix;
+	        home-manager.useUserPackages = true;
+          home-manager.users.theta = import ./home-manager/home.nix;
+          home-manager.extraSpecialArgs = {inherit inputs;};
         }
         nixos-hardware.nixosModules.lenovo-thinkpad-t14s
       ];

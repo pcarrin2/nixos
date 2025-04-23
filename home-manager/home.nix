@@ -23,6 +23,8 @@
       networkmanager-openconnect
       # Notifications
       libnotify
+      # Editor
+      neovim
       # Wayland utils
       wl-clipboard
       slurp
@@ -68,7 +70,10 @@
       fortune
     ];
 
-    keyboard.options = [ "caps:swapescape" ];
+    file.".config/nvim/" = {
+      source = "${inputs.neovim-config}";
+      recursive = true;
+    };
   };
 
   services.systembus-notify.enable = true; # for notifications!

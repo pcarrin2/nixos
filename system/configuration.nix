@@ -54,7 +54,6 @@
   i18n.supportedLocales = [ "all" ];
   console = {
     font = "/etc/nixos/system/assets/unifont.psf";
-    keyMap = "us";
   };
 
   time.timeZone = "America/Chicago";

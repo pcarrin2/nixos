@@ -1,5 +1,8 @@
-{ config }:
+{ config, ... }:
 {
-  services.xserver.xkb.options = "caps:swapescape"
-  console.useXkbConfig = true
+  services.xserver.xkb = {
+    options = "caps:swapescape";
+    layout = "us";
+  };
+  console.useXkbConfig = true;
 }

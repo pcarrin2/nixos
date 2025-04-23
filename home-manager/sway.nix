@@ -10,6 +10,7 @@
     systemd.enable = true;
     extraConfig = ''
       output * background #433a96 solid_color
+      input type:keyboard xkb_options "caps:swapescape"
       bindsym Print exec wayshot --stdout -s "$( slurp )" | wl-copy
       bindsym XF86AudioMute exec pamixer -t
       bindsym XF86AudioRaiseVolume exec pamixer -i 5
