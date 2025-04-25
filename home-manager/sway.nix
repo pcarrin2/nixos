@@ -17,6 +17,10 @@
       bindsym XF86AudioLowerVolume exec pamixer -d 5
       bindsym Shift+XF86AudioRaiseVolume exec pamixer -i 1
       bindsym Shift+XF86AudioLowerVolume exec pamixer -d 1
+      bindsym XF86MonBrightnessUp exec brightnessctl set 10%+
+      bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+      bindsym Shift+XF86MonBrightnessUp exec brightnessctl set 2%+
+      bindsym Shift+XF86MonBrightnessDown exec brightnessctl set 2%-
     '';
     config = {
       modifier = "Mod4";

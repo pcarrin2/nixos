@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, osConfig, ... }:
+{ pkgs, inputs, osConfig, ... }:
 {
   imports = [ 
     ./tmux.nix 
@@ -33,8 +33,9 @@
       iamb
       w3m
       alpine
-      # Sound utilities
+      # Light and sound utilities
       pamixer
+      brightnessctl
       # Media and music
       mplayer
       mpv
@@ -42,6 +43,7 @@
       id3v2
       ytfzf
       cava
+      inputs.yt-x.packages."${system}".default
       # Pictures 
       fim
       inkscape

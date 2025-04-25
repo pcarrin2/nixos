@@ -21,6 +21,9 @@
       repo = "neovim_config";
       flake = false;
     };
+
+    # yt-x: browse youtube from the terminal
+    yt-x.url = "github:Benexl/yt-x";
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware, neovim-config, ... }@inputs:
