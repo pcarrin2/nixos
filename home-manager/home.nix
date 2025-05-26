@@ -59,8 +59,9 @@
       # Python 3
       python3
       virtualenv
-      # Github
+      # Git forges
       gh
+      glab
       # Art
       processing
       darktable
