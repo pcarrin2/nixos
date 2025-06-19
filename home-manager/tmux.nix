@@ -44,6 +44,12 @@
       bind-key j select-pane -D
       bind-key k select-pane -U
       bind-key l select-pane -R
+
+      # display information about character under cursor
+      bind-key -T copy-mode-vi u \
+        send-keys -X begin-selection \; \
+        send-keys -X pipe "xargs tmux display \"$(xargs unicode --format \'U+{ordc:04x}: {name}\')\"" \;
+      bind-key u run-shell "tmux display \"$(unicode \"#{cursor_character}\" --format \'U+{ordc:04x}: {name}\')\""
     '';
   };
 }

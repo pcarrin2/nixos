@@ -99,6 +99,7 @@
     dateutils
     openssl
     nix-index
+    unicode-paracode
     # Sound utilities
     alsa-utils
     # Development
