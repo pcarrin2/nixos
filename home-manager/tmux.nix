@@ -1,8 +1,4 @@
 {
-  config,
-  pkgs,
-  lib, 
-  inputs,
   ...
 }: {
   programs.tmux = {
@@ -42,6 +38,12 @@
       set -g window-status-bell-style 'fg=brightwhite bg=magenta'
       set -g window-status-format ' #I '
       set -g window-status-current-format ' #I '
+
+      # vim-style pane navigation (overwrites some default keybinds, sorry)
+      bind-key h select-pane -L
+      bind-key j select-pane -D
+      bind-key k select-pane -U
+      bind-key l select-pane -R
     '';
   };
 }

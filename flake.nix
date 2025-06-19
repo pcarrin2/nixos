@@ -40,6 +40,7 @@
 	        home-manager.useUserPackages = true;
           home-manager.users.theta = import ./home-manager/home.nix;
           home-manager.extraSpecialArgs = {inherit inputs;};
+          home-manager.backupFileExtension = "backup";
         }
         nixos-hardware.nixosModules.lenovo-thinkpad-t14s
       ];
