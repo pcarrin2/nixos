@@ -48,8 +48,14 @@
       # display information about character under cursor
       bind-key -T copy-mode-vi u \
         send-keys -X begin-selection \; \
-        send-keys -X pipe "xargs tmux display \"$(xargs unicode --format \'U+{ordc:04x}: {name}\')\"" \;
+        send-keys -X pipe "xargs tmux display \"$(xargs unicode --format \'U+{ordc:04x}: {name}\')\""
       bind-key u run-shell "tmux display \"$(unicode \"#{cursor_character}\" --format \'U+{ordc:04x}: {name}\')\""
+
+      # add character under cursor to custom charset file
+      bind-key -T copy-mode-vi U \
+        send-keys -X begin-selection \; \
+        send-keys -X pipe "xargs unicode --format \'U+{ordc:04x} # {name}\\n\' >> ~/found_chars.set"
+      bind-key U run-shell "unicode \"#{cursor_character}\" --format \'U+{ordc:04x} # {name}\\n\' >> ~/found_chars.set"
     '';
   };
 }
