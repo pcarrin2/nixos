@@ -19,6 +19,7 @@
       firefox
       signal-desktop
       thunderbird
+      cinny-desktop
       # VPN connection
       networkmanager-openconnect
       # Notifications
@@ -30,7 +31,6 @@
       slurp
       wayshot
       # TUI messaging
-      iamb
       w3m
       alpine
       # Light and sound utilities
