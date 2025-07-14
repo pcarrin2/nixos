@@ -8,6 +8,7 @@
     ./foot.nix
     ./vim.nix
     ./rofi.nix
+    ./chawan.nix
   ];
   
   home = {
