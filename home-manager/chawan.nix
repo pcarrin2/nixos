@@ -1,7 +1,7 @@
-{ inputs, ... }:
+{ pkgs, lib, inputs, config, programs, ... }:
 {
-  programs.chawan = {
-    enable = true;
+ programs.chawan = {
+   enable = true;
     settings = {
       buffer = {
         images = true;
@@ -14,6 +14,6 @@
           scripting = true;
       };
       pager."C-k" = "() => pager.load('https://lite.duckduckgo.com/?=')";
-    };
+     };
   };
 }
