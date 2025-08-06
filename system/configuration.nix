@@ -41,6 +41,8 @@
   hardware.enableRedistributableFirmware = true;
   hardware.enableAllFirmware = true;
   hardware.graphics.enable = true;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   networking = {
     hostName = "thinkpad";

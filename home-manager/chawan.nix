@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, config, programs, ... }:
+{ ... }:
 {
  programs.chawan = {
    enable = true;
@@ -8,12 +8,22 @@
         autofocus = true;
         cookie = true;
       };
-      siteconf.sr-ht = {
+      siteconf.lwn = {
           host = "lwn\.net";
           cookie = "save";
           scripting = true;
       };
-      pager."C-k" = "() => pager.load('https://lite.duckduckgo.com/?=')";
+      siteconf.stackexchange = {
+          host = "(.*\.)?stackexchange\.com";
+          cookie = "save";
+          scripting = true;
+      };
+      siteconf.stackoverflow = {
+          host = "(.*\.)?stackoverflow\.com";
+          cookie = "save";
+          scripting = true;
+      };
+      page."C-k" = "() => pager.load('ddg:')";
      };
   };
 }

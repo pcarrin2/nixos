@@ -14,7 +14,7 @@
       PS1="\[\033[1;35m\]\! \[\033[1;34m\][\u@\h:\w]\$ \[\033[0m\]"
       if [ "$TERM" = "linux" ]; then
           echo -en "\e]P0101010"  # black
-          echo -en "\e]P82B2B2B"  # darkgrey
+          echo -en "\e]P85B5B5B"  # darkgrey
           echo -en "\e]P19D1515"  # darkred
           echo -en "\e]P9E33636"  # red
           echo -en "\e]P200800B"  # darkgreen

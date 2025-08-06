@@ -21,7 +21,9 @@
       signal-desktop
       thunderbird
       cinny-desktop
-      # VPN connection
+      blueman
+      # Remote work
+      remmina
       networkmanager-openconnect
       # Notifications
       libnotify
