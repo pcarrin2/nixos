@@ -2,6 +2,6 @@
 {
   users.users.theta = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "libvirtd" ];
+    extraGroups = [ "wheel" "networkmanager" "video" "libvirtd" "dialout" ];
   };
 }
