@@ -65,6 +65,7 @@
       # Git forges
       gh
       glab
+      radicle-tui
       # Art
       processing
       darktable
