@@ -66,6 +66,8 @@
       gh
       glab
       radicle-tui
+      # Tor
+      tor
       # Art
       processing
       darktable
