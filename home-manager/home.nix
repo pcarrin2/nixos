@@ -20,7 +20,7 @@
       firefox
       signal-desktop
       thunderbird
-      cinny-desktop
+      # cinny-desktop -- broken in 25.11
       blueman
       # Remote work
       remmina
