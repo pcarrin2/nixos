@@ -11,6 +11,17 @@
       defaultFonts = {
         monospace = [ "Unifont" ];
       };
+      localConf = ''
+<selectfont>
+    <rejectfont>
+        <pattern>
+            <patelt name="family" >
+                <string>Aerial</string>
+            </patelt>
+        </pattern>
+    </rejectfont>
+</selectfont>
+      '';
     };
     fontDir.enable = true;
   };

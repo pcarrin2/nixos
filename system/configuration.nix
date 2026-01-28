@@ -122,6 +122,8 @@
     enableSSHSupport = true;
   };
 
+  services.nixseparatedebuginfod2.enable = true;
+
   # Needed by sway
   security.polkit.enable = true;
 
