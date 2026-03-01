@@ -20,7 +20,7 @@
       firefox
       signal-desktop
       thunderbird
-      # cinny-desktop -- broken in 25.11
+      # cinny-desktop -- broken in 25.11 and unstable
       blueman
       # Remote work
       remmina
@@ -51,6 +51,7 @@
       fim
       inkscape
       fbcat
+      image-roll
       # Passwords, authentication
       pass
       pinentry-tty
@@ -71,6 +72,8 @@
       # Art
       processing
       darktable
+      # CLI system utilities
+      htop
       # Silly
       neofetch
       pipes
