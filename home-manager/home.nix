@@ -46,7 +46,7 @@
       id3v2
       ytfzf
       cava
-      inputs.yt-x.packages."${system}".default
+      inputs.yt-x.packages."${stdenv.hostPlatform.system}".default
       # Pictures 
       fim
       inkscape
