@@ -13,6 +13,7 @@
       ./zerotier.nix
       ./libvirt.nix
       ./kbd.nix
+      ./nfs.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
