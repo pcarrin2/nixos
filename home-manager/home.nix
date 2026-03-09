@@ -23,6 +23,7 @@
       vlc
       libreoffice
       protonvpn-gui
+      qbittorrent
       # cinny-desktop -- broken in 25.11 and unstable
       blueman
       # Remote work
