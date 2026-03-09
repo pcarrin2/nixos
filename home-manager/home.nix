@@ -54,6 +54,8 @@
       # Pictures 
       fim
       inkscape
+      # icons for inkscape
+      gnome.adwaita-icon-theme
       fbcat
       image-roll
       swayimg
