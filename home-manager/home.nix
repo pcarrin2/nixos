@@ -80,7 +80,7 @@
       # CLI system utilities
       htop
       # Silly
-      neofetch
+      fastfetch
       pipes
       cmatrix
       cowsay
