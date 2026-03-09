@@ -20,6 +20,9 @@
       firefox
       signal-desktop
       thunderbird
+      vlc
+      libreoffice
+      protonvpn-gui
       # cinny-desktop -- broken in 25.11 and unstable
       blueman
       # Remote work
@@ -52,6 +55,7 @@
       inkscape
       fbcat
       image-roll
+      swayimg
       # Passwords, authentication
       pass
       pinentry-tty
