@@ -50,6 +50,8 @@
     networkmanager.enable = true;
     useDHCP = lib.mkDefault true;
     firewall.enable = true;
+    firewall.interfaces."proton0".allowedTCPPortRanges = [ { from = 32768; to = 65535; } ];
+    firewall.interfaces."proton0".allowedUDPPortRanges = [ { from = 32768; to = 65535; } ];
   };
 
   # Locale and internationalization
