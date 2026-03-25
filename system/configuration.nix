@@ -6,6 +6,7 @@
       ./borgbackup.nix
       ./console-lock.nix
       ./filesystems.nix
+      ./firewall.nix
       ./fonts.nix
       ./home-manager.nix
       ./sound.nix
@@ -49,9 +50,6 @@
     hostName = "thinkpad";
     networkmanager.enable = true;
     useDHCP = lib.mkDefault true;
-    firewall.enable = true;
-    firewall.interfaces."proton0".allowedTCPPortRanges = [ { from = 32768; to = 65535; } ];
-    firewall.interfaces."proton0".allowedUDPPortRanges = [ { from = 32768; to = 65535; } ];
   };
 
   # Locale and internationalization
