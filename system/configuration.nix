@@ -123,6 +123,8 @@
     enableSSHSupport = true;
   };
 
+  programs.wireshark.enable = true;
+
   services.nixseparatedebuginfod2.enable = true;
 
   # Needed by sway
